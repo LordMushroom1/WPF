@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF.All_Stuff_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="All_Stuff_Window" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border BorderBrush="#2CDAC9" BorderThickness="2,4,2,6">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#8CF3E9" Offset="0.0"/>
+                    <GradientStop Color="#20C2B2" Offset="0.3"/>
+                    <GradientStop Color="#149184" Offset="0.6"/>
+                    <GradientStop Color="#40C2B5" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        
+        <ListBox x:Name="Stuff_ListBox" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="127,40,209,40"/>
+        
+        <Button Click="Filter_Stuff_Click" Width="100" Height="50" Margin="646,274,54,110" Content="Filter" FontSize="25" Background="#00AF9D" BorderBrush="#00544C" BorderThickness="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <GroupBox Header="Filter Parameters" Margin="602,40,10,203">
+            <StackPanel>
+                <TextBlock x:Name="StuffTB" FontSize="15" Margin="0, 10, 0, 270" HorizontalAlignment="Center">Stuff</TextBlock>
+
+                <TextBlock x:Name="PetTB" FontSize="15" Margin="0, -270, 0, 250" HorizontalAlignment="Center">Pet</TextBlock>
+
+                <TextBlock x:Name="FirstTB" FontSize="15" Margin="0, -250, 0, 240" HorizontalAlignment="Center">First parameter</TextBlock>
+
+                <TextBlock x:Name="SecondTB" FontSize="15" Margin="0, -240, 0, 230" HorizontalAlignment="Center">Second parameter</TextBlock>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

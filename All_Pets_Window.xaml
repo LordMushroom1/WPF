@@ -1,0 +1,49 @@
+﻿<Window x:Class="WPF.All_Pets_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="All_Pets_Window" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border BorderBrush="#2CDAC9" BorderThickness="2,4,2,6">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#8CF3E9" Offset="0.0"/>
+                    <GradientStop Color="#20C2B2" Offset="0.3"/>
+                    <GradientStop Color="#149184" Offset="0.6"/>
+                    <GradientStop Color="#40C2B5" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ListBox x:Name="Pets_ListBox" ScrollViewer.VerticalScrollBarVisibility="Visible" Margin="91,40,245,40"/>
+        
+        <Button Width="100" Height="50" Margin="630,291,70,93" Content="Filter" FontSize="25" Click="Filter_Click" Background="#00AF9D" BorderBrush="#00544C" BorderThickness="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#008174"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <GroupBox Header="Filter Parameters" Margin="560,40,0,217" >
+            <StackPanel>
+                <TextBlock x:Name="BreedTB" FontSize="15" Margin="0, 10, 0, 250" HorizontalAlignment="Center">Breed</TextBlock>
+
+                <TextBlock x:Name="AgeTB" FontSize="15" Margin="0, -250, 0, 240" HorizontalAlignment="Center">Age</TextBlock>
+
+                <TextBlock x:Name="VaccineTB" FontSize="15" Margin="0, -240, 0, 230" HorizontalAlignment="Center">Vaccine</TextBlock>
+
+                <TextBlock x:Name="SizeTB" FontSize="15" Margin="0, -230, 0, 220" HorizontalAlignment="Center">Size</TextBlock>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>

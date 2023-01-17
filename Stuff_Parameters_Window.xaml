@@ -1,0 +1,34 @@
+﻿<Window x:Class="WPF.Stuff_Parameters_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="Stuff_Parameters_Window" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border BorderBrush="#2CDAC9" BorderThickness="2,4,2,6">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#8CF3E9" Offset="0.0"/>
+                    <GradientStop Color="#20C2B2" Offset="0.3"/>
+                    <GradientStop Color="#149184" Offset="0.6"/>
+                    <GradientStop Color="#40C2B5" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Label Content="Pet" HorizontalAlignment="Left" Margin="140,24,0,0" FontSize="30"/>
+        <ComboBox x:Name="petTypeCmb" FontSize="25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" Margin="101,72,0,0"/>
+        <ComboBox x:Name="firstCmb" FontSize="25" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" Width="129" Height="40"/>
+        <ComboBox x:Name="secondCmb" FontSize="25" HorizontalAlignment="Left" Margin="563,72,0,0" VerticalAlignment="Top" Width="129" Height="40"/>
+        <Button Click="Get_Stuff_Parameters_Click" Content="Обрати" HorizontalAlignment="Center" Margin="0,285,0,0" VerticalAlignment="Top" Height="59" Width="164" FontSize="25" Background="#00AF9D" BorderBrush="#00544C" BorderThickness="4">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+</Window>
